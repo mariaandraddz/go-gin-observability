@@ -1,0 +1,23 @@
+### 1. Requisição GET para o endpoint /ping (Sucesso 200)
+GET http://localhost:8080/ping
+Accept: application/json
+
+###
+
+### 2. Requisição GET para as métricas do Prometheus
+GET http://localhost:8080/metrics
+
+###
+
+### 3. Requisição para rota inexistente (Simula Erro 404)
+GET http://localhost:8080/endpoint-inexistente
+
+###
+
+### 4. Requisição POST não permitida (Simula Erro 405)
+POST http://localhost:8080/ping
+Content-Type: application/json
+
+{
+  "teste": "payload"
+}
